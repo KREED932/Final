@@ -5,10 +5,12 @@ body {
   background-color: white;
   color: #333;
 }
+
 header {
   background-color: #ff69b4; /* Pink */
   padding: 10px 20px;
 }
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -16,18 +18,22 @@ nav ul {
   display: flex;
   justify-content: center;
 }
+
 nav ul li {
   margin: 0 15px;
 }
+
 nav ul li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
+
 nav ul li a:hover {
   text-decoration: underline;
   color: #00bfff; /* Light blue */
 }
+
 button#theme-toggle {
   color: white;
   background-color: #ff69b4; /* Pink */
@@ -35,24 +41,31 @@ button#theme-toggle {
   padding: 10px;
   cursor: pointer;
 }
+
 button#theme-toggle:hover {
   background-color: #ff1493; /* Darker pink */
 }
+
 main {
   padding: 20px;
+  padding-bottom: 50px; /* Added padding to prevent footer overlap */
 }
+
 section {
   margin-bottom: 40px;
 }
+
 h1 {
   font-size: 2.5em;
   color: #ff69b4; /* Pink */
 }
+
 p {
   font-size: 1.1em;
   line-height: 1.6;
   color: #333;
 }
+
 a.btn {
   background-color: #00bfff; /* Light blue */
   color: white;
@@ -60,51 +73,62 @@ a.btn {
   text-decoration: none;
   border-radius: 5px;
 }
+
 a.btn:hover {
   background-color: #1e90ff; /* Slightly darker light blue */
 }
+
 #about img {
   max-width: 300px;
   float: right;
   margin-left: 20px;
   border-radius: 10px;
 }
+
 .projects article {
   background-color: #f0f8ff; /* Light blue background */
   border: 1px solid #ccc;
   margin: 20px 0;
   padding: 20px;
 }
+
 .projects article h2 {
   color: #ff69b4; /* Pink */
 }
+
 .skills ul {
   list-style-type: square;
   margin-left: 20px;
 }
+
 .skills ul li {
   margin-bottom: 10px;
 }
+
 aside.additional-info {
   background-color: #f8f8ff; /* Light background color */
   padding: 15px;
   border-radius: 5px;
   margin-top: 20px;
 }
+
 .contact div {
   margin-bottom: 10px;
 }
+
 .contact label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .contact input, .contact textarea {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
+
 .contact button {
   background-color: #ff69b4; /* Pink */
   color: white;
@@ -113,103 +137,82 @@ aside.additional-info {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .contact button:hover {
   background-color: #ff1493; /* Darker pink */
 }
+
 .contact-info h2 {
   color: #00bfff; /* Light blue */
 }
+
 .contact-info ul {
   list-style-type: none;
   padding: 0;
 }
+
 .contact-info ul li {
   margin: 10px 0;
 }
+
 .contact-info a {
   color: #ff69b4; /* Pink */
   text-decoration: none;
 }
+
 .contact-info a:hover {
   text-decoration: underline;
   color: #00bfff; /* Light blue */
 }
+
 footer {
   background-color: #ff69b4; /* Pink */
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
+  position: relative; /* Changed from fixed to relative */
   width: 100%;
   bottom: 0;
+  border-top: solid rgba(200, 200, 200, 0.5); /* Lighter, thinner border */
+  border-width: 0.5px; /* Border width */
 }
-.sidebar {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: #f0f8ff; /* Light blue */
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.highlight {
-  color: yellow;
-  font-weight: bold;
-}
-.box {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.box1 {
-  background-color: #ff69b4; /* Pink */
-  z-index: 1;
-}
-.box2 {
-  background-color: #00bfff; /* Light blue */
-  z-index: 2;
-}
-.box3 {
-  background-color: #f0f8ff; /* Light blue */
-  z-index: 3;
-}
+
 ul {
   list-style-type: square;
 }
+
 ol {
   list-style-type: lower-roman;
 }
+
 a {
   color: #ff69b4; /* Pink */
   font-weight: bold;
   text-decoration: none;
 }
+
 a:visited {
   color: #00bfff; /* Light blue */
   font-style: italic;
 }
+
 a:hover {
   text-decoration: underline;
   color: #ff1493; /* Darker pink */
 }
+
 img.float-right {
   float: right;
   margin-left: 20px;
 }
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
   }
+
   .contact input, .contact textarea {
     width: 100%;
-  }
-  .sidebar {
-    position: static;
-    width: 100%;
-    margin-top: 20px;
   }
 }
