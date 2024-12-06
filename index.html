@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Welcome to My Portfolio</title>
+  
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,6 +32,7 @@
       <a href="#projects" class="btn">View My Projects</a>
     </section>
 
+    <!-- About Me Section -->
     <section id="about" class="about">
       <h1>About Me</h1>
       <p>
@@ -38,11 +41,11 @@
       <img src="images/2023-08-01 (2).jpg" alt="Kristen Reed">
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects" class="projects">
       <h1>My Projects</h1>
       <article class="project">
-        <h2>MY Fav Hobby</h2>
+        <h2>MY FAV HOBBY</h2>
         <p>This is a webpage I made to showcase my love for biking. </p>
       </article>
 
@@ -52,7 +55,7 @@
       </article>
     </section>
 
-    <!-- Skills/Courses -->
+    <!-- Skills/Courses Section -->
     <section id="skills" class="skills">
       <h1>Skills & Courses </h1>
       <ul>
@@ -61,35 +64,52 @@
       </ul>
       <aside class="additional-info">
         <h2>Certifications</h2>
-        <p>I have completed Computer Programming 1&2, Web Design and Development,Data Structures, and Animation. This sesmester in I aslo took Cyber Securtiy where I recievd a few awards for completing Hashing courses</p>
+        <p>I have completed Computer Programming 1&2, Web Design and Development, Data Structures, and Animation. This semester in I also took Cyber Security where I received a few awards for completing Hashing courses.</p>
       </aside>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <h1>Contact Me</h1>
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required aria-required="true">
-        </div>
-        <div>
-          <label for="email">Phone Number:</label>
-          <input type="email" id="email" name="_replyto" required aria-required="true">
-        </div>
-        <div>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <aside class="contact-info">
-        <h2>OR email me @</h2>
-        <ul>
-          <li><a href="contactemail">Kristenreed75@gmail.com</a></li>
-        </ul>
-      </aside>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true">
+      </div>
+      <div>
+        <label for="email">Phone Number:</label>
+        <input type="email" id="email" name="_replyto" required aria-required="true">
+      </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+      </div>
+      <button type="submit" id="submitBtn">Send Message</button>
     </section>
+
+    <aside class="contact-info">
+      <h2>OR email me @</h2>
+      <ul>
+        <li><a href="mailto:Kristenreed75@gmail.com">Kristenreed75@gmail.com</a></li>
+      </ul>
+    </aside>
+
+    <!-- JavaScript for Contact Form Validation -->
+    <script>
+      document.getElementById('submitBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission for validation
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill out all fields before submitting.');
+          return;
+        }
+
+        alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+      });
+    </script>
   </main>
 
   <!-- Footer -->
@@ -97,8 +117,7 @@
     <p>&copy; 2024 Kristen Reed. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>
+
 
