@@ -216,3 +216,16 @@ img.float-right {
     width: 100%;
   }
 }
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #444;
+}
+
