@@ -30,6 +30,25 @@
       <h1>Welcome to My Webpage</h1>
       <p>My name is Kristen Reed. I am a senior at Lincoln University majoring in computer science. I am interested in biking and reading. But my real goal is to become an architect firm owner. I am on the path to achieve my goal and below are a few of my projects I've completed so far.</p>
       <a href="#projects" class="btn">View My Projects</a>
+
+      <!-- Typing effect JavaScript for the Home section -->
+      <script>
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Example usage for the headline in the Home section
+        const homeHeading = document.querySelector('.home h1');
+        typeWriter(homeHeading, "Welcome to My Webpage", 100);
+      </script>
     </section>
 
     <!-- About Me Section -->
@@ -42,22 +61,21 @@
     </section>
 
     <!-- Projects Section -->
-<section id="projects" class="projects">
-  <h1>My Projects</h1>
+    <section id="projects" class="projects">
+      <h1>My Projects</h1>
   
-  <article class="project">
-    <h2>MY Fav Hobby</h2>
-    <p>This is a webpage I made to showcase my love for biking. </p>
-    <a href="file:///media/archive/Reed_Kristen_MYFAVHOBBY.zip/my_hobby.html" class="btn">View My Project</a>
-  </article>
+      <article class="project">
+        <h2>MY Fav Hobby</h2>
+        <p>This is a webpage I made to showcase my love for biking. </p>
+        <a href="file:///media/archive/Reed_Kristen_MYFAVHOBBY.zip/my_hobby.html" class="btn">View My Project</a>
+      </article>
 
-  <article class="project">
-    <h2>Interactive JavaScript</h2>
-    <p>This is a practice webpage focusing on interactive JavaScript. </p>
-    <a href="file:///home/chronos/u-d1a59120603cee5ed094820b20dbeb37a55afad3/MyFiles/Downloads/in_class_practice_Oct8.html" class="btn">View My Project</a>
-  </article>
-</section>
-
+      <article class="project">
+        <h2>Interactive JavaScript</h2>
+        <p>This is a practice webpage focusing on interactive JavaScript. </p>
+        <a href="file:///home/chronos/u-d1a59120603cee5ed094820b20dbeb37a55afad3/MyFiles/Downloads/in_class_practice_Oct8.html" class="btn">View My Project</a>
+      </article>
+    </section>
 
     <!-- Skills/Courses Section -->
     <section id="skills" class="skills">
@@ -88,6 +106,24 @@
         <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
       </div>
       <button type="submit" id="submitBtn">Send Message</button>
+
+      <!-- Form validation JavaScript for the Contact form -->
+      <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent form submission for validation
+
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+          if (!name || !email || !message) {
+            alert('Please fill out all fields before submitting.');
+            return;
+          }
+
+          alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+        });
+      </script>
     </section>
 
     <aside class="contact-info">
@@ -97,23 +133,6 @@
       </ul>
     </aside>
 
-    <!-- JavaScript for Contact Form Validation -->
-    <script>
-      document.getElementById('submitBtn').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form submission for validation
-
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (!name || !email || !message) {
-          alert('Please fill out all fields before submitting.');
-          return;
-        }
-
-        alert('Thank you for your message, ' + name + '! We will get back to you soon.');
-      });
-    </script>
   </main>
 
   <!-- Footer -->
@@ -121,7 +140,15 @@
     <p>&copy; 2024 Kristen Reed. All rights reserved.</p>
   </footer>
 
+  <!-- Dynamic Theme Switching JavaScript -->
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
 </body>
 </html>
+
 
 
