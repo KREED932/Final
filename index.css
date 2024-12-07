@@ -234,9 +234,7 @@ a:hover, button:hover {
 }
 
 /* Custom Cursor Styles */
-body {
-  cursor: none; 
-}
+
 .custom-cursor {
   position: absolute;
   width: 20px;
