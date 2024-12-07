@@ -235,11 +235,16 @@ a:hover, button:hover {
 
 /* Custom Cursor Styles */
 
+/* Custom Cursor Styles */
+body {
+  cursor: none;  
+}
+
 .custom-cursor {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #ff00ff;
+  background-color: #ff00ff; 
   border-radius: 50%;
   pointer-events: none;
   transition: background-color 0.3s ease;
@@ -247,8 +252,9 @@ a:hover, button:hover {
 }
 
 .custom-cursor:hover {
-  background-color: #00ff00;
+  background-color: #00ff00; 
 }
+
 
 
   .contact input, .contact textarea {
