@@ -6,9 +6,8 @@ body {
   background-color: white;
   color: #333;
 }
-
 header {
-  background-color: #ff69b4; /* Restored Pink Header */
+  background-color: #ff69b4; 
   padding: 10px 20px;
 }
 
@@ -228,6 +227,9 @@ a:hover, button:hover {
 }
 
 /* Custom Cursor Styles */
+body {
+  cursor: none; 
+}
 .custom-cursor {
   position: absolute;
   width: 20px;
