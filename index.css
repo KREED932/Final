@@ -237,20 +237,21 @@ a:hover, button:hover {
 body {
   cursor: none; 
 }
-custom-cursor {
-  position: fixed;
+.custom-cursor {
+  position: absolute;
   width: 20px;
   height: 20px;
   background-color: #ff00ff;
   border-radius: 50%;
-  pointer-events: none;  
-  z-index: 9999;  
+  pointer-events: none;
   transition: background-color 0.3s ease;
+  z-index: 9999;  
 }
 
 .custom-cursor:hover {
   background-color: #00ff00;
 }
+
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
