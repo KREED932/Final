@@ -220,6 +220,13 @@ body.dark-mode footer {
   background-color: #444;
 }
 
+body.dark-mode #about,
+body.dark-mode .welcome {
+  border: 2px solid white; 
+  padding: 20px;  
+  background-color: #444; 
+}
+
 /* Hover effects */
 a:hover, button:hover {
   transform: scale(1.05);
