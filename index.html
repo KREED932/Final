@@ -145,21 +145,24 @@
     });
   </script>
   
-  <!-- Custom Cursor JavaScript -->
-  // JavaScript to create and move the custom cursor
-document.addEventListener("mousemove", function(event) {
-  const cursor = document.querySelector(".custom-cursor");
-  const x = event.pageX;
-  const y = event.pageY;
+   <!-- Custom Cursor JavaScript -->
+  <script>
+    // JavaScript to create and move the custom cursor
+    document.addEventListener("mousemove", function(event) {
+      const cursor = document.querySelector(".custom-cursor");
+      const x = event.pageX;
+      const y = event.pageY;
 
-  cursor.style.left = `${x - cursor.offsetWidth / 2}px`;  // Center the cursor
-  cursor.style.top = `${y - cursor.offsetHeight / 2}px`;
-});
+      cursor.style.left = `${x - cursor.offsetWidth / 2}px`;  // Center the cursor
+      cursor.style.top = `${y - cursor.offsetHeight / 2}px`;
+    });
 
-// Create the custom cursor element
-const cursor = document.createElement("div");
-cursor.classList.add("custom-cursor");
-document.body.appendChild(cursor);
+    // Create the custom cursor element
+    const cursor = document.createElement("div");
+    cursor.classList.add("custom-cursor");
+    document.body.appendChild(cursor);
+  </script>
+
 
 
 </body>
