@@ -146,19 +146,22 @@
     });
   </script>
   
+  document.addEventListener('DOMContentLoaded', () => {
   // Create the custom cursor element
-const cursor = document.createElement('div');
-cursor.classList.add('custom-cursor');
-document.body.appendChild(cursor);
+  const cursor = document.createElement('div');
+  cursor.classList.add('custom-cursor');
+  document.body.appendChild(cursor);
 
-// Update cursor position
-document.addEventListener('mousemove', (e) => {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
+  // Update cursor position
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-  cursor.style.left = `${mouseX - cursor.offsetWidth / 2}px`; // Adjust for cursor width
-  cursor.style.top = `${mouseY - cursor.offsetHeight / 2}px`; // Adjust for cursor height
+    cursor.style.left = `${mouseX - cursor.offsetWidth / 2}px`;
+    cursor.style.top = `${mouseY - cursor.offsetHeight / 2}px`;
+  });
 });
+
 
 
 </body>
