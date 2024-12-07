@@ -228,22 +228,6 @@ body.dark-mode header {
 body.dark-mode footer {
     background-color: #444;
 }
-/*Cursor*/
-body {
-  cursor: none; 
-}
-
-
-.custom-cursor {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ff69b4; 
-  border-radius: 50%;
-  pointer-events: none; 
-  transition: transform 0.2s ease-out; 
-  z-index: 9999;
-}
 
 
 a:hover, button:hover {
